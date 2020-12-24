@@ -10,7 +10,7 @@ variable "region" {
 variable "cluster_name" {
   description = "Variable to provide your desired name for the cluster. The script will create a random name if this is empty"
   type        = string
-  default     = ""
+  default     = "jx-devada"
 }
 
 variable "cluster_version" {
@@ -73,13 +73,13 @@ variable "velero_username" {
 variable "desired_node_count" {
   description = "The number of worker nodes to use for the cluster"
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "min_node_count" {
   description = "The minimum number of worker nodes to use for the cluster"
   type        = number
-  default     = 3
+  default     = 2
 }
 
 variable "max_node_count" {
@@ -91,7 +91,7 @@ variable "max_node_count" {
 variable "node_machine_type" {
   description = "The instance type to use for the cluster's worker nodes"
   type        = string
-  default     = "m5.large"
+  default     = "t2.xlarge"
 }
 
 variable "spot_price" {
@@ -109,7 +109,7 @@ variable "node_group_ami" {
 variable "node_group_disk_size" {
   description = "node group worker disk size"
   type        = string
-  default     = "50"
+  default     = "100"
 }
 
 variable "key_name" {
@@ -127,7 +127,7 @@ variable "volume_type" {
 variable "volume_size" {
   description = "The volume size in GB"
   type        = number
-  default     = 50
+  default     = 100
 }
 
 variable "iops" {
